@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          # Same Python, Pillow and requests as the Debian release under each moOde version.
+          - { python: "3.11", pillow: "9.4.*", requests: "2.28.*" }   # Bookworm, moOde 9
+          - { python: "3.13", pillow: "11.1.*", requests: "2.32.*" }  # Trixie, moOde 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: sudo apt-get install -y --no-install-recommends fonts-dejavu-core shellcheck
+      - run: pip install "pillow==${{ matrix.pillow }}" "requests==${{ matrix.requests }}" ruff
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: shellcheck install.sh uninstall.sh deploy.sh
+      - run: python -m unittest -v

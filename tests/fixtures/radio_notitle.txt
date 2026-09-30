@@ -1,0 +1,6 @@
+file=http://icecast.radiofrance.fr/fip-hifi.aac
+artist=Radio station
+album=FIP
+title=Radio station
+coverurl=imagesw%2Fradio-logos%2FFIP.jpg
+state=play

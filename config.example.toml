@@ -1,0 +1,21 @@
+# moode-smalltv configuration, installed as /opt/moode-smalltv/config.toml.
+# After editing: sudo systemctl restart moode-smalltv
+
+# IP address of the SmallTV-Ultra (shown on its screen at boot).
+screen_host = "192.168.1.100"
+
+# Minutes stopped, or paused, before the screen switches to the clock.
+stop_minutes = 5
+pause_minutes = 1
+
+# Brightness 0-100, dimmed between night_start and night_end (Pi local time).
+brightness_day = 80
+brightness_night = 20
+night_start = "22:00"
+night_end = "07:00"
+
+# Advanced, defaults shown.
+# moode_url = "http://localhost"
+# currentsong = "/var/local/www/currentsong.txt"
+# font_regular = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+# font_bold = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"

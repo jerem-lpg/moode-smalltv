@@ -1,0 +1,27 @@
+[Unit]
+Description=moOde now playing on GeekMagic SmallTV-Ultra
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/moode-smalltv
+ExecStart=/usr/bin/python3 -m moode_smalltv.main -c /opt/moode-smalltv/config.toml
+Environment=PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+Restart=on-failure
+RestartSec=10
+
+# Throwaway non-root user, read-only system.
+DynamicUser=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+# Low priority: audio playback comes first.
+Nice=10
+CPUWeight=20
+IOSchedulingClass=idle
+MemoryMax=80M
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+file=Spotify Active
+outrate=Not playing

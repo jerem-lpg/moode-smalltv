@@ -1,0 +1,5 @@
+artist=Radio station
+album=RCO Live
+title=Robert Schumann: Symphony No. 2 in C major, Op. 61 - Royal Concertgebouw Orchestra, Daniele Gatti
+coverurl=imagesw%2Fradio-logos%2FRCO%20Live.jpg
+state=play

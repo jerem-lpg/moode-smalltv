@@ -1,0 +1,8 @@
+file=Spotify Active
+artist=MGMT
+album=Loss Of Life
+title=Nothing Changes
+coverurl=https://i.scdn.co/image/ab67616d0000b2739d39d0a744ae757f045d7c93
+encoded=Vorbis
+bitrate=320K
+outrate=PCM 16/44.1 kHz, 2ch

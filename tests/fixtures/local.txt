@@ -1,0 +1,7 @@
+file=NAS/Flacs/The Temptations/Vintage Gold/04 - Since I Lost My Baby.flac
+artist=The Temptations
+album=Vintage Gold
+title=Since I Lost My Baby
+coverurl=/coverart.php/NAS%2FFlacs%2FThe%20Temptations%2FVintage%20Gold%2F04%20-%20Since%20I%20Lost%20My%20Baby.flac
+track=4
+state=play
